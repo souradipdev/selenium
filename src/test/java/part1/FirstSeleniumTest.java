@@ -50,6 +50,7 @@ public class FirstSeleniumTest {
     String actualResult = dashboardHeader.getText();
     String expectedResult = "Dashboard";
     Assert.assertEquals(actualResult, expectedResult, "Login failed or incorrect page loaded.");
+
 //    Assert.assertNotEquals(actualResult, expectedResult, "Login failed or incorrect page loaded.");
   }
 }
