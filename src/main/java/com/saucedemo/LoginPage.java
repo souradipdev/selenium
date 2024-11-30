@@ -33,7 +33,7 @@ public class LoginPage extends BasePage {
   }
 
   public void getErrorMessage(){
-    WebElement error = driver.findElement(errorMessage);
+    WebElement error = find(errorMessage);
     error.getText();
   }
 }
