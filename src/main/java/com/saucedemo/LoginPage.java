@@ -8,10 +8,8 @@ public class LoginPage extends BasePage {
 
   private By userNameField = By.id("user-name");
   private By passwordField = By.id("password");
-
   private By LoginButton = By.className("submit-button btn_action");
-
-  private By errorMessage = By.cssSelector("error-message-container error h3");
+  private By errorMessage = By.cssSelector(".error-message-container h3");
 
   public void setUserNameField(String username) {
     set(userNameField, username);
@@ -32,7 +30,7 @@ public class LoginPage extends BasePage {
     return loginButton();
   }
 
-  public void getErrorMessage(){
+  public void getErrorMessage() {
     WebElement error = find(errorMessage);
     error.getText();
   }
