@@ -8,7 +8,7 @@ public class LoginPage extends BasePage {
 
   private By userNameField = By.id("user-name");
   private By passwordField = By.id("password");
-  private By LoginButton = By.className("submit-button btn_action");
+  private By LoginButton = By.cssSelector(".submit-button.btn_action");
   private By errorMessage = By.cssSelector(".error-message-container h3");
 
   public void setUserNameField(String username) {

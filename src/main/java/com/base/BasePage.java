@@ -3,6 +3,7 @@ package com.base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -14,8 +15,9 @@ public class BasePage {
   public static WebDriver driver;
   public static WebDriverWait wait;
 
-  public void setDriver(WebDriver driver) {
+  public void setDriver(WebDriver driver, WebDriverWait wait) {
     BasePage.driver = driver;
+    BasePage.wait = wait;
   }
 
   protected WebElement find(By locator) {
