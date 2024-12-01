@@ -1,6 +1,6 @@
 package part2.com.saucedemo.test.product;
 
-import com.saucedemo.ProductPage;
+import com.saucedemo.pages.ProductPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import part2.com.saucedemo.base.BaseTest;
