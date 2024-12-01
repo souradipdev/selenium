@@ -8,9 +8,8 @@ public class LoginTest extends BaseTest {
 
   @Test
   public void testLoginErrorMessage() {
-    loginPage.setUserNameField("standard_user");
-    loginPage.setPasswordField("1234");
-    loginPage.clickLoginButton();
+    loginPage.logIntoApplication("standard_user", "1234");
+//    loginPage.clickLoginButton();
     String actualMesssage = loginPage.getErrorMessage();
     Assert.assertTrue(actualMesssage.contains("Epic sadface"));
 
