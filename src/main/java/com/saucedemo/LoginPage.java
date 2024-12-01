@@ -19,7 +19,7 @@ public class LoginPage extends BasePage {
     set(passwordField, password);
   }
 
-  public ProductPage loginButton() {
+  public ProductPage clickLoginButton() {
     click(LoginButton);
     return new ProductPage();
   }
@@ -27,11 +27,11 @@ public class LoginPage extends BasePage {
   public ProductPage logIntoApplication(String username, String password) {
     setUserNameField(username);
     setPasswordField(password);
-    return loginButton();
+    return clickLoginButton();
   }
 
-  public void getErrorMessage() {
+  public String getErrorMessage() {
     WebElement error = find(errorMessage);
-    error.getText();
+    return error.getText();
   }
 }
