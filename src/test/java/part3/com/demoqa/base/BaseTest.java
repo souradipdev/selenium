@@ -24,12 +24,13 @@ public class BaseTest {
   public void loadApplication() {
     driver.get(DEMOQA_URL);
     basePage = new BasePage();
-    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    basePage.setDriver(driver, wait);
+//    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//    basePage.setDriver(driver, wait);
+    basePage.setDriver(driver);
   }
 
   @AfterClass
-  public void tearDown() throws InterruptedException {
+  public void tearDown() {
     driver.quit();
   }
 }

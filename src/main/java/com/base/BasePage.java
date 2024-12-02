@@ -17,6 +17,12 @@ public class BasePage {
     BasePage.wait = wait;
   }
 
+  public void setDriver(WebDriver driver) {
+    BasePage.driver = driver;
+  }
+
+
+
   protected WebElement findUsingLocator(By locator) {
     return driver.findElement(locator);
   }

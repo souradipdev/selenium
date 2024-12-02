@@ -7,8 +7,8 @@ import org.testng.annotations.Test;
 import part3.com.demoqa.base.BaseTest;
 
 public class RadioButtonTest extends BaseTest {
-  protected HomePage homepage;
-  public PractiseFormPage practiseFormPage;
+  HomePage homepage;
+  PractiseFormPage practiseFormPage;
 
   @Test
   public void runTest() {
