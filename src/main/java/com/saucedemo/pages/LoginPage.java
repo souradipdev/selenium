@@ -12,15 +12,15 @@ public class LoginPage extends BasePage {
   private By errorMessage = By.cssSelector(".error-message-container h3");
 
   public void setUserNameField(String username) {
-    set(userNameField, username);
+    setKeys(userNameField, username);
   }
 
   public void setPasswordField(String password) {
-    set(passwordField, password);
+    setKeys(passwordField, password);
   }
 
   public ProductPage clickLoginButton() {
-    click(LoginButton);
+    clickUsingLocator(LoginButton);
     return new ProductPage();
   }
 
@@ -31,7 +31,7 @@ public class LoginPage extends BasePage {
   }
 
   public String getErrorMessage() {
-    WebElement error = find(errorMessage);
+    WebElement error = findUsingLocator(errorMessage);
     return error.getText();
   }
 }

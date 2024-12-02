@@ -3,9 +3,6 @@ package com.base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -20,18 +17,18 @@ public class BasePage {
     BasePage.wait = wait;
   }
 
-  protected WebElement find(By locator) {
+  protected WebElement findUsingLocator(By locator) {
     return driver.findElement(locator);
   }
 
-  protected void set(By locator, String text) {
-    find(locator).clear();
-    find(locator).sendKeys(text);
+  protected void setKeys(By locator, String text) {
+    findUsingLocator(locator).clear();
+    findUsingLocator(locator).sendKeys(text);
 
   }
 
-  protected void click(By locator) {
-    find(locator).click();
+  protected void clickUsingLocator(By locator) {
+    findUsingLocator(locator).click();
   }
 
 

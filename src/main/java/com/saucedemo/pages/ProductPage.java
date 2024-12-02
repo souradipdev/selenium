@@ -7,6 +7,6 @@ public class ProductPage extends BasePage {
   private By productHeader = By.cssSelector(".title");
 
   public boolean isProductHeaderDisplayed(){
-    return find(productHeader).isDisplayed();
+    return findUsingLocator(productHeader).isDisplayed();
   }
 }

@@ -6,8 +6,7 @@ import org.openqa.selenium.WebDriver;
 public class Utility {
   public static WebDriver driver;
 
-  public void setUtilityDriver(){
+  public static void setUtilityDriver(){
     driver = BasePage.driver;
   }
-
 }
