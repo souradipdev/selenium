@@ -6,8 +6,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 
-import java.time.Duration;
-
 public class BaseTest {
   private WebDriver driver;
   private WebDriverWait wait;

@@ -1,9 +1,14 @@
 package com.demoqa.pages;
 
 import com.base.BasePage;
+import com.demoqa.pages.elements.ElementPage;
 import com.demoqa.pages.form.PractiseFormPage;
 import com.utilities.JavascriptUtility;
 import org.openqa.selenium.By;
+
+import static com.utilities.JavascriptUtility.clickJs;
+import static com.utilities.JavascriptUtility.scrollToElementJs;
+import static com.utilities.Utility.setUtilityDriver;
 
 public class HomePage extends BasePage {
 
@@ -13,9 +18,16 @@ public class HomePage extends BasePage {
   private By alertsFrameWindowsCard = By.xpath("//div[@id='app']//h5[contains(text(),'Alerts')]");
 
   public PractiseFormPage clickForm() {
-    JavascriptUtility.setUtilityDriver();
-    JavascriptUtility.scrollToElementJs(formsCard);
+    setUtilityDriver();
+    scrollToElementJs(formsCard);
     JavascriptUtility.clickJs(formsCard);
     return new PractiseFormPage();
+  }
+
+  public ElementPage clickElements() {
+    setUtilityDriver();
+    scrollToElementJs(elementsCard);
+    clickJs(elementsCard);
+    return new ElementPage();
   }
 }
