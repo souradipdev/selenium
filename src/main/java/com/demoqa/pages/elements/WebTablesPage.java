@@ -9,7 +9,7 @@ public class WebTablesPage extends ElementPage {
   By submit = By.id("submit");
 
   public void clickEdit(String email) {
-    By edit = By.xpath("//div[text()=' " + email + "']//following::span");
+    By edit = By.xpath("//div[text()='" + email + "']//following::span[1]");
     clickUsingLocator(edit);
   }
 
@@ -26,7 +26,12 @@ public class WebTablesPage extends ElementPage {
   }
 
   public String getEditedAge(String email) {
-    By editedAge = By.xpath("//div[text()=' " + email + " ']//preceding::div[1]");
+    By editedAge = By.xpath("//div[text()='" + email + "']//preceding::div[1]");
     return findUsingLocator(editedAge).getText();
+  }
+
+  public String getNewSalary(String email) {
+    By editedSalary = By.xpath("//div[text()='" + email + "']//following::div[1]");
+    return findUsingLocator(editedSalary).getText();
   }
 }
