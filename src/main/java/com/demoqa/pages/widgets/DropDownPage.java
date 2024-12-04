@@ -1,6 +1,4 @@
 package com.demoqa.pages.widgets;
-
-import com.base.BasePage;
 import org.openqa.selenium.By;
 
 import java.util.List;
@@ -8,9 +6,9 @@ import java.util.List;
 import static com.utilities.DropDownUtility.*;
 import static com.utilities.JavascriptUtility.scrollToElementJs;
 
-public class DropDownPage extends BasePage {
+public class DropDownPage extends WidgetsPage {
 
-  private By standardMultiSelect = By.id("cars");
+  private By standardMultiSelect = By.name("cars");
 
   public void selectStandardMulti(String text) {
     scrollToElementJs(standardMultiSelect);
@@ -27,9 +25,9 @@ public class DropDownPage extends BasePage {
     selectByValue(standardMultiSelect, value);
   }
 
-  public void deselectStandardMultiselectOption(String option) {
+  public void deselectStandardMultiselectValue(String value) {
     scrollToElementJs(standardMultiSelect);
-    deselectByValue(standardMultiSelect, option);
+    deselectByValue(standardMultiSelect, value);
   }
 
   public List<String> getAllSelectedStandardMultiOptions() {

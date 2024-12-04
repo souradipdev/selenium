@@ -1,10 +1,10 @@
-package part3.com.demoqa.elements;
+package part3.com.demoqa.test.elements;
 
 import com.demoqa.pages.HomePage;
 import com.demoqa.pages.elements.WebTablesPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import part3.com.demoqa.base.BaseTest;
+import part3.com.demoqa.test.base.BaseTest;
 
 public class WebTablesTest extends BaseTest {
 

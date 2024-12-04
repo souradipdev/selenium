@@ -1,4 +1,4 @@
-package part3.com.demoqa.base;
+package part3.com.demoqa.test.base;
 
 import com.base.BasePage;
 import org.openqa.selenium.WebDriver;
@@ -29,6 +29,6 @@ public class BaseTest {
 
   @AfterClass
   public void tearDown() {
-    driver.quit();
+//    driver.quit();
   }
 }

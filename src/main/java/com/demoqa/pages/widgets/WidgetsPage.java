@@ -7,14 +7,21 @@ import static com.utilities.JavascriptUtility.clickJs;
 import static com.utilities.JavascriptUtility.scrollToElementJs;
 
 public class WidgetsPage extends HomePage {
-  By selectMenuButton = By.id("item-8");
+  By selectMenuButton = By.xpath("//li[@id='item-8']/span[text()='Select Menu']");
+  By selectDatePickerButton = By.xpath("//li[@id='item-2']/span[text()='Date Picker']");
 
   public DropDownPage clickSelectMenu() {
-    if (!findUsingLocator(selectMenuButton).isSelected()) {
-      scrollToElementJs(selectMenuButton);
-      clickJs(selectMenuButton);
-    }
+
+    scrollToElementJs(selectMenuButton);
+    clickJs(selectMenuButton);
+
     return new DropDownPage();
   }
 
+  public DatePickerPage clickDatePickerPage() {
+    scrollToElementJs(selectDatePickerButton);
+    clickJs(selectDatePickerButton);
+
+    return new DatePickerPage();
+  }
 }

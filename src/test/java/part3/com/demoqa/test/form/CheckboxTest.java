@@ -4,7 +4,7 @@ import com.demoqa.pages.HomePage;
 import com.demoqa.pages.form.PractiseFormPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import part3.com.demoqa.base.BaseTest;
+import part3.com.demoqa.test.base.BaseTest;
 
 public class CheckboxTest extends BaseTest {
   HomePage homePage;
