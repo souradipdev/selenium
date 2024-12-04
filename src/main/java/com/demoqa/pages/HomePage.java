@@ -3,6 +3,7 @@ package com.demoqa.pages;
 import com.base.BasePage;
 import com.demoqa.pages.elements.ElementPage;
 import com.demoqa.pages.form.PractiseFormPage;
+import com.demoqa.pages.widgets.WidgetsPage;
 import com.utilities.JavascriptUtility;
 import org.openqa.selenium.By;
 
@@ -29,5 +30,12 @@ public class HomePage extends BasePage {
     scrollToElementJs(elementsCard);
     clickJs(elementsCard);
     return new ElementPage();
+  }
+
+  public WidgetsPage clickWidgets(){
+    setUtilityDriver();
+    scrollToElementJs(widgetsCard);
+    clickJs(widgetsCard);
+    return new WidgetsPage();
   }
 }
