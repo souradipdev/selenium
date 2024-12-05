@@ -7,10 +7,10 @@ import static com.utilities.DropDownUtility.selectByVisibleText;
 public class DatePickerPage extends WidgetsPage {
   By datePickerInput = By.id("datePickerMonthYearInput");
   By monthDropdown = By.className("react-datepicker__month-select");
-  By yearDropdown = By.id("react-datepicker__year-select");
+  By yearDropdown = By.className("react-datepicker__year-select");
 
   public By getBy(String day) {
-    return By.className("react-datepicker__day react-datepicker__day--0" + day);
+    return By.className("react-datepicker__day--0" + day);
   }
 
   public void selectDate(String date) {
