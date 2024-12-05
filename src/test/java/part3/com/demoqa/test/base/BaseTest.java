@@ -10,9 +10,9 @@ import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 import java.io.File;
-import java.io.IOException;
 import java.nio.file.Files;
-import java.util.logging.FileHandler;
+
+import static com.utilities.Utility.setUtilityDriver;
 
 public class BaseTest {
   private WebDriver driver;
@@ -24,6 +24,7 @@ public class BaseTest {
   public void setup() {
     driver = new ChromeDriver();
     driver.manage().window().maximize();
+    setUtilityDriver();
   }
 
   @BeforeMethod
@@ -62,7 +63,6 @@ public class BaseTest {
       }
     }
   }
-
 
   @AfterClass
   public void tearDown() {

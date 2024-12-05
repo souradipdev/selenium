@@ -19,21 +19,18 @@ public class HomePage extends BasePage {
   private By alertsFrameWindowsCard = By.xpath("//div[@id='app']//h5[contains(text(),'Alerts')]");
 
   public PractiseFormPage clickForm() {
-    setUtilityDriver();
     scrollToElementJs(formsCard);
     JavascriptUtility.clickJs(formsCard);
     return new PractiseFormPage();
   }
 
   public ElementPage clickElements() {
-    setUtilityDriver();
     scrollToElementJs(elementsCard);
     clickJs(elementsCard);
     return new ElementPage();
   }
 
-  public WidgetsPage clickWidgets(){
-    setUtilityDriver();
+  public WidgetsPage clickWidgets() {
     scrollToElementJs(widgetsCard);
     clickJs(widgetsCard);
     return new WidgetsPage();
