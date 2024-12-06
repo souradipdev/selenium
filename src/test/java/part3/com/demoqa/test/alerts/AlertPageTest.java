@@ -17,26 +17,25 @@ public class AlertPageTest extends BaseTest {
     AlertPage alertPage = page.clickAlert().clickAlertPage();
 
     //Alert box
-    /*alertPage.clickAlertButton();
+    alertPage.clickAlertButton();
     String expectedResult = "You clicked a button";
     String actualResult = getAlertText();
     acceptAlert();
 
-    Assert.assertEquals(expectedResult, actualResult,
-            "/n Actual result and expected result are different /n");*/
+    Assert.assertEquals(actualResult, expectedResult,
+            "/n Actual result and expected result are different /n");
 
     // Confirm box
-    /*alertPage.clickConfirmButton();
+    alertPage.clickConfirmButton();
     String expectedString = "Do you confirm action?";
     String actualString = getAlertText();
     dismissAlert();
-    Assert.assertEquals(expectedString, actualString,
+    Assert.assertEquals(actualString, expectedString,
             "/n Actual result and expected result are different /n");
     String expectedMessage = "You selected Cancel";
     String actualMessage = alertPage.getConfirmBoxResult();
-    Assert.assertEquals(expectedMessage, actualMessage,
+    Assert.assertEquals(actualMessage, expectedMessage,
             "/n Actual result and expected result are different /n");
-  */
 
     // Prompt box
     alertPage.clickPromptButton();

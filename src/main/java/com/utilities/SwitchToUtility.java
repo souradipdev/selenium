@@ -25,21 +25,20 @@ public class SwitchToUtility extends Utility {
     switchTo().alert().sendKeys(text);
   }
 
-  public static void switchToFrameString(String nameOrId){
+  public static void switchToFrameString(String nameOrId) {
     switchTo().frame(nameOrId);
   }
 
-  public static void switchToDefaultContext(){
+  public static void switchToDefaultContext() {
     switchTo().defaultContent();
   }
 
-  public static void switchToFrameIndex( int index){
+  public static void switchToFrameIndex(int index) {
     switchTo().frame(index);
   }
 
-  public static void switchToFrameElement(WebElement element){
+  public static void switchToFrameElement(WebElement element) {
     switchTo().frame(element);
   }
-  
 
 }
