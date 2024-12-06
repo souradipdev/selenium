@@ -1,6 +1,7 @@
 package com.demoqa.pages;
 
 import com.base.BasePage;
+import com.demoqa.pages.alerts.AlertFrameWindowsPage;
 import com.demoqa.pages.elements.ElementPage;
 import com.demoqa.pages.form.PractiseFormPage;
 import com.demoqa.pages.widgets.WidgetsPage;
@@ -9,7 +10,6 @@ import org.openqa.selenium.By;
 
 import static com.utilities.JavascriptUtility.clickJs;
 import static com.utilities.JavascriptUtility.scrollToElementJs;
-import static com.utilities.Utility.setUtilityDriver;
 
 public class HomePage extends BasePage {
 
@@ -34,5 +34,11 @@ public class HomePage extends BasePage {
     scrollToElementJs(widgetsCard);
     clickJs(widgetsCard);
     return new WidgetsPage();
+  }
+
+  public AlertFrameWindowsPage clickAlert(){
+    scrollToElementJs(alertsFrameWindowsCard);
+    clickJs(alertsFrameWindowsCard);
+    return new AlertFrameWindowsPage();
   }
 }
