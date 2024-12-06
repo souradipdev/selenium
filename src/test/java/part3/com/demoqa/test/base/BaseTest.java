@@ -24,7 +24,6 @@ public class BaseTest {
   public void setup() {
     driver = new ChromeDriver();
     driver.manage().window().maximize();
-    setUtilityDriver();
   }
 
   @BeforeMethod
@@ -34,6 +33,7 @@ public class BaseTest {
 //    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 //    basePage.setDriver(driver, wait);
     basePage.setDriver(driver);
+    setUtilityDriver();
   }
 
   @AfterMethod

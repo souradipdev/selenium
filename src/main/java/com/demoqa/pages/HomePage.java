@@ -36,7 +36,7 @@ public class HomePage extends BasePage {
     return new WidgetsPage();
   }
 
-  public AlertFrameWindowsPage clickAlert(){
+  public AlertFrameWindowsPage clickAlert() {
     scrollToElementJs(alertsFrameWindowsCard);
     clickJs(alertsFrameWindowsCard);
     return new AlertFrameWindowsPage();
